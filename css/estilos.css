@@ -1,0 +1,200 @@
+*¨ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:active {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Volkhov', serif;
+
+
+}
+
+/*----fondo de Home----*/
+.naturalu {
+    background-image: url(../media/imagenes/fondo_caritas.jpg);
+}
+
+
+
+/*----fondo de pieles grasas----*/
+.grasita {
+    background-image: url(../media/imagenes/nosotros2_cremas.jpg);
+}
+
+
+/*----fondo de pieles mixtas----*/
+.travel {
+    background-image: url(../media/imagenes/everygreen.jpg);
+}
+
+/*----fondo de pieles secas----*/
+.egiptop {
+    background-image: url(../media/imagenes/craquelada.jpg);
+}
+
+/*----fondo de pieles nosotros----*/
+.family {
+    background-image: url(../media/imagenes/todo5.jpg);
+}
+
+/*------header------*/
+.clase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(81 167 88);
+    flex-direction: row;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo p {
+    margin: 10px;
+}
+
+.clase-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.clase-ul li {
+    margin: 10px;
+    font-family: 'Volkhov', serif;
+}
+
+.piconic {
+    color: hsl(120, 3%, 6%);
+    font-family: 'Volkhov', serif;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+/*--------------fin del header---------------*/
+
+/*------------------INICIO DE MI INDEX-------------*/
+
+/*--------------inicio de main--------*/
+.card-index {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+
+
+}
+
+.greg {
+    height: 75vh;
+}
+
+
+.bg-card {
+    background-color: rgb(131, 217, 131);
+    padding: 9px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 320px;
+}
+
+
+.w_img {
+    width: 420px;
+}
+
+
+.border-card {
+    background-color: #79c179;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pin {
+    background-color: #1d920e85;
+    padding: 9px 49px;
+    margin: 20px;
+    border-color: transparent;
+    border-radius: 10px;
+    font-family: 'Volkhov', serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.pin:hover {
+    background-color: rgb(37, 152, 37);
+}
+
+.carasg-img {
+    width: 230px;
+    height: 230px;
+}
+
+.w-img {
+    width: 230px;
+    height: 230px
+}
+
+
+/*-----------------FIN DE MI INDEX-------------*/
+
+/*------------------fin de main----------------*/
+
+
+
+/*-----footer-----*/
+.bg-footer {
+    background-color: rgb(81 167 88);
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    }
+
+
+.redes {
+    margin: 0 5%;
+    text-align: end;
+    width: 100%;
+}
+
+.redes a:hover {
+    color: black;
+    S
+}
+
+.derechos {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/*-----fin de footer-----*/
