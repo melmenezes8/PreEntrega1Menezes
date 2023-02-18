@@ -2,45 +2,122 @@
 <html lang="en">
 
 <head>
-    <title>Carrito</title>
+    <title>Shop</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" width="100"
+        height="100" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./media/imagenes/logo_proyecto1.jpg" type="image/x-icon">
+
 </head>
 
-<body class="bg-success">
+<body style="background-color: #71b78c;">
+    <header class="clase-header">
+        <!--flex aplicado-->
+        <div class="logo">
+            <a href="index.html"><img src="./media/imagenes/logo_proyecto1.jpg" alt="logo"></a>
+            <p class="piconic">Iconic</p>
+        </div>
+        <nav>
+            <ul class="clase-ul">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="/pages/grasas.html">Pieles Grasas</a>
+                </li>
+                <li>
+                    <a href="/pages/mixtas.html">Pieles Mixtas</a>
+                </li>
+                <li>
+                    <a href="/pages/secas.html">Pieles Secas</a>
+                </li>
+                <li>
+                    <a href="/pages/nosotros.html">Nosotros</a>
+                </li>
+                <a href="/pages/carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Bienvenida! Comenza tu plan de cuidado</h1>
-        <ul class="list-group">
-            <li class="list-group-item">Agua Micelar   -  $2.000</li>
-            <li class="list-group-item">Serum de Matcha  -  $2.000</li>
-            <li class="list-group-item">Contorno de ojos   - $1.800</li>
-            <li class="list-group-item">Niacinamida    -  $2.600</li>
-            <li class="list-group-item">Acido glicolico   -  $1.900</li>
-        </ul>
+        <div class="lista_productos">
+            <h1>Bienvenida a tu nuevo plan de skin care </h1>
+            <ul class="list-group">
+                <li class="list-group-item">Agua micelar - $2400</li>
+                <li class="list-group-item">Tonico termal - $1600 </li>
+                <li class="list-group-item">Crema hidratante - $2050</li>
+                <li class="list-group-item">Agua de rosas - $1000</li>
+                <li class="list-group-item">niacinamida - $1890</li>
+                <li class="list-group-item">Cicaplast - $2600</li>
+                <li class="list-group-item">Crema nocturna - $1750</li>
+                <li class="list-group-item">Acido glicolico - $1600</li>
+                <li class="list-group-item">Serum con 2% acido hialuronico - $2600</li>
+                <li class="list-group-item">Toallitas desmaquillantes - $2000</li>
+                <li class="list-group-item">Gel de limpiza - $2900</li>
+                <li class="list-group-item">Gel refrescante Aloevera - $1500</li>
+                <li class="list-group-item">Protector solar - $1900</li>
+                <li class="list-group-item">Balsamo labial - $700</li>
+                <!-----probar con este "como prueba de error"----->
+                <li class="list-group-item">Gel corporal - $3900</li>
+
+            </ul>
+        </div>
+
+        <div class="formulario_productos">
+            <h1>Organizando tu rutina</h1>
+            <form id="ingreso-producto">
+                <div class="mb-3"><label for="Nombre" class="form-label">Producto:</label><input type="text"
+                        class="form-control" id="Nombre" required></div>
+                <div class="mb-3"><label for="Precio" class="form-label">Precio:</label><input type="number"
+                        class="form-control" id="Precio" required></div>
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Género:</label>
+                    <select class="form-select form-control" id="genero" required
+                        aria-label="Default select examples"></select>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+            </form>
+        </div>
+
+        <div class="tabla_productos">
+            <p id="mensaje-error"></p>
+            <table id="tabla" class="table" hiddens>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Genero</th>
+                    <th>Borrar</th>
+                </tr>
+            </table>
+            <p id="mensaje-servidor" hidden>Esperando al servidor...</p>
+        </div>
+
     </div>
-    <div class="container">
-        <h1>Ingresar productos y precios </h1>
-        <form id="ingreso-producto">
-            <div class="mb-3"><label for="Nombre" class="form-label">Producto:</label><input type="text"
-                    class="form-control" id="Nombre" required></div>
-            <div class="mb-3"><label for="Precio" class="form-label">Precio:</label><input type="number"
-                    class="form-control" id="Precio" required></div>
-            <button type="submit" class="btn btn-primary mb-3">Enviar</button>
-        </form>
-        <p id="mensaje-error"></p>
-        <table id="tabla" class="table">
-            <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Eliminar</th>
-            </tr>
-        </table>
-    </div>
-    <script src="../productos.js"></script>
-    <script src="../main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
+    <footer class="bg-footer">
+        <div class="redes">
+            <a class="icono-redes" href=""><i class="fab fa-instagram"></i></a>
+            <a class="icono-redes" href=""><i class="fab fa-twitter"></i></a>
+            <a class="icono-redes" href=""><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="derechos">Hecho por MM</div>
+    </footer>
+
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../productos.js"></script>
+<script src="../main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/bdd3b13385.js" crossorigin="anonymous"></script>
 
 </html>

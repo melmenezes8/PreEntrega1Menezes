@@ -2,9 +2,10 @@ class Producto {
     constructor(entrada) {
         this.Nombre = entrada.Nombre;
         this.Precio = parseInt(entrada.Precio);
+        this.genero = entrada.genero;
     }
 
-    saleMasDe1000 () {
-        return this.precio <= 1000;
+    saleMenosDe1000() {
+        return this.Precio >= 1000;
     }
 }
