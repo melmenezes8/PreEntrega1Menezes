@@ -4,7 +4,7 @@ let productos = [];
 let generosDelProducto = [];
 
 const obtenerGeneros = async () => {
-  const response = await fetch('/tipospieles.json');
+  const response = await fetch('../tipospieles.json');
   const data = await response.json();
 
   generosDelProducto = data;
